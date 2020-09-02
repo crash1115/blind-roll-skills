@@ -1,8 +1,7 @@
-
 {
   "BLINDROLLSKILLS.ForceBlindRollsSetting": "Enable Forced Blind Rolls",
   "BLINDROLLSKILLS.ForceBlindRollsSettingHint": "Toggle this on to force the skills selected below to always roll blindly.",
 
   "BLINDROLLSKILLS.SkillNamesSetting": "Skills to Roll Blindly",
-  "BLINDROLLSKILLS.SkillNamesSettingHint": "Enter the names of the skills you would like to always blind roll. Separate multiple skills with commas. If you don't want any skills to force blind rolls, uncheck the Enable Forced Blind Rolls option rather than leaving this blank. Leaving it blank could lead to unexpected results.",
+  "BLINDROLLSKILLS.SkillNamesSettingHint": "Enter the names of the skills you would like to always blind roll. Separate multiple skills with commas. If you don't want any skills to force blind rolls, uncheck the Enable Forced Blind Rolls option rather than leaving this blank. Leaving it blank could lead to unexpected results."
 }
