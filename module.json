@@ -1,0 +1,21 @@
+{
+	"name": "blind-roll-skills",
+	"title": "Blind Roll Skills",
+	"description": "Lets the DM force selected skills to always roll blindly.",
+	"version": "0.2.0",
+	"author": "CRASH1115#2944",
+	"minimumCoreVersion": "0.6.5",
+	"compatibleCoreVersion": "0.6.6",
+	"systems": ["dnd5e"],
+	"esmodules": ["blindrolls.js"],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"url": "https://github.com/crash1115/blind-roll-skills",
+  "manifest": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/module.json",
+	"download": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/blind-roll-skills.zip"
+}
