@@ -20,11 +20,11 @@ Hooks.once("init", () => {
   });
 });
 
-// Catch rolls and do things
-Hooks.on(`preCreateChatMessage`, (data, options, other) => {
+// Catch chat message renders and do things
+Hooks.on('renderChatMessage', (app, html, msg) => {
 
   // If Force Blind Rolls is enabled, let's do some stuff!
-  if (game.settings.get("blind-roll-skills", "forceBlindRolls")){
+  if (game.settings.get("blind-roll-skills", "forceBlindRolls") && game.user.isGM === false){
 
     // Get list of skills to roll blindly
     let inputSkills = game.settings.get("blind-roll-skills", "skillNames");
@@ -53,25 +53,25 @@ Hooks.on(`preCreateChatMessage`, (data, options, other) => {
 
     // Blind-ify Default 5e Rolls
     // 5e stores the names in the card's flavor text, so we check that.
-    let flavorString = data.flavor;
+    let flavorString = msg.message.flavor;
 
-    // If any of the formatted items in the targets array match match the flavor text, we set the roll to blind.
+    // If any of the formatted items in the targets array are contained in the flavor text, we set the roll to blind.
     if(flavorString){
       for (var i=0; i < default5eTargets.length ; i++){
-        if(flavorString == default5eTargets[i]){
-          data.blind = true;
+        if(flavorString.includes(default5eTargets[i])){
+          $(html).find(".dice-roll").replaceWith("<div>"+game.i18n.localize("BLINDROLLSKILLS.HiddenRollMessage")+"</div>");
         }
       }
     }
 
     // Blind-ify BetterRolls Rolls
     // Better Rolls constructs its own chat cards, with the skill names in the header of the card's content, so we look at content.
-    let contentString = data.content;
+    let contentString = msg.message.content;
 
     // If any of the formatted items in the targets array match appear in that content, we set the roll to blind.
     for (var i=0; i < betterRollsTargets.length ; i++){
       if(contentString.includes(betterRollsTargets[i])){
-        data.blind = true;
+        $(html).find(".dice-roll").replaceWith("<div>"+game.i18n.localize("BLINDROLLSKILLS.HiddenRollMessage")+"</div>");
       }
     }
   }

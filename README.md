@@ -12,6 +12,8 @@ I made this for use in a home game, and at this time I have no plans to distribu
 5. Click Install
 
 ## Change Log
+### Version 0.3.0
+Actually make things work as intended instead of just looking like they work as intended
 ### Version 0.2.1
 Fix localization error
 ### Version 0.2.0

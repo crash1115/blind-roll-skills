@@ -2,7 +2,7 @@
 	"name": "blind-roll-skills",
 	"title": "Blind Roll Skills",
 	"description": "Lets the DM force selected skills to always roll blindly.",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"author": "CRASH1115#2944",
 	"minimumCoreVersion": "0.6.5",
 	"compatibleCoreVersion": "0.6.6",
