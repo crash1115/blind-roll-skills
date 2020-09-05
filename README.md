@@ -1,5 +1,5 @@
-# Blind Roll Skills
-This module allows the DM to specify certain skills that get forced to roll blindly. This is handy in case you don't want the results of an Insight or Perception check to tip your players off.
+# Crash's 5e Blind Roll Skills
+This module allows the DM to always hide the results of specified skills from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off.
 
 I made this for use in a home game, and at this time I have no plans to distribute it widely. You're welcome to fork and modify or even publish it if you need functionality that this does not provide.
 
@@ -7,7 +7,7 @@ I made this for use in a home game, and at this time I have no plans to distribu
 ### Using The Manifest URL
 1. Open up Foundry
 2. Navigate to the Add-On Modules tab
-3. Click install Module
+3. Click Install Module
 4. Paste the following URL into the Manifest URL text field: https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/module.json
 5. Click Install
 

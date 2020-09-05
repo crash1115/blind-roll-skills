@@ -1,7 +1,7 @@
 {
 	"name": "blind-roll-skills",
-	"title": "Blind Roll Skills",
-	"description": "Lets the DM force selected skills to always roll blindly.",
+	"title": "Crash's 5e Blind Roll Skills",
+	"description": "Lets the DM hide the results of selected skills from players.",
 	"version": "0.3.0",
 	"author": "CRASH1115#2944",
 	"minimumCoreVersion": "0.6.5",
@@ -17,5 +17,5 @@
 	],
 	"url": "https://github.com/crash1115/blind-roll-skills",
   "manifest": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/module.json",
-	"download": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/blind-roll-skills.zip"
+	"download": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/releases/download/v0.3.0/blind-roll-skills.zip"
 }
