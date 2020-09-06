@@ -8,16 +8,7 @@ export const registerSettings = function() {
     type: Boolean
   });
 
-  game.settings.register("blind-roll-skills", "skillNames", {
-    name: game.i18n.localize("BLINDROLLSKILLS.SettingSkillNames"),
-    hint: game.i18n.localize("BLINDROLLSKILLS.SettingSkillNamesSettingHint"),
-    scope: "world",
-    config: true,
-    default: "Insight, Perception",
-    type: String
-  });
-
-  game.settings.register("blind-roll-skills", "hiddenMessage", {
+    game.settings.register("blind-roll-skills", "hiddenMessage", {
     name: game.i18n.localize("BLINDROLLSKILLS.SettingHiddenMessage"),
     hint: game.i18n.localize("BLINDROLLSKILLS.SettingHiddenMessageHint"),
     scope: "world",

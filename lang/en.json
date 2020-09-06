@@ -1,7 +1,6 @@
 {
   "BLINDROLLSKILLS.SettingForceBlindRolls": "Enable Hidden Skill Rolls",
   "BLINDROLLSKILLS.SettingForceBlindRollsHint": "Toggle this on to hide the results of skills selected below from non-GMs.",
-
   "BLINDROLLSKILLS.SettingHideAcrobatics": "Hide Acrobatics",
   "BLINDROLLSKILLS.SettingHideAnimalHandling": "Hide Animal Handling",
   "BLINDROLLSKILLS.SettingHideArcana": "Hide Arcana",
@@ -20,9 +19,6 @@
   "BLINDROLLSKILLS.SettingHideSleightOfHand": "Hide Sleight of Hand",
   "BLINDROLLSKILLS.SettingHideStealth": "Hide Stealth",
   "BLINDROLLSKILLS.SettingHideSurvival": "Hide Survival",
-
   "BLINDROLLSKILLS.SettingHiddenMessage": "Message When Hidden",
-  "BLINDROLLSKILLS.SettingHiddenMessageHint": "The message that displays in the chat card in place of the roll results. Be as snarky or as informative as you want.",
-  "BLINDROLLSKILLS.SettingSkillNames": "Skills To Hide",
-  "BLINDROLLSKILLS.SettingSkillNameHint": "Enter the names of the skills you would like to hide the results of. Separate multiple skills with commas. If you don't want to hide the results of any skills, uncheck the Enable Hidden Skill Rolls option above rather than leaving this blank. Leaving it blank could lead to unexpected results."
+  "BLINDROLLSKILLS.SettingHiddenMessageHint": "The message that displays in the chat card in place of the roll results. Be as snarky or as informative as you want."
 }
