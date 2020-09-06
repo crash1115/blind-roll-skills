@@ -23,7 +23,7 @@ This module allows the DM to always hide the results of specified skills from pl
 5. Click Install
 
 # Got Questions?
-Contact me on Discord (CRASH1115#2944). I make no promises to provide support for this module, since I only use it for my home games.
+Contact me on Discord (CRASH1115#2944).
 
 # License
 - This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/legalcode).
