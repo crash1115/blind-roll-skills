@@ -1,3 +1,5 @@
+![GitHub All Releases](https://img.shields.io/github/downloads/crash1115/blind-roll-skills/total) ![GitHub Releases](https://img.shields.io/github/downloads/crash1115/blind-roll-skills/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/crash1115/blind-roll-skills?label=latest%20version)
+
 # Crash's Hide Skill Rolls
 This module allows the DM to always hide the results of specified skills from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off.
 
