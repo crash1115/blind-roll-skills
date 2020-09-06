@@ -1,7 +1,28 @@
 {
-  "BLINDROLLSKILLS.ForceBlindRollsSetting": "Enable Forced Blind Rolls",
-  "BLINDROLLSKILLS.ForceBlindRollsSettingHint": "Toggle this on to force the skills selected below to always roll blindly.",
-  "BLINDROLLSKILLS.HiddenRollMessage": "The result of this roll has been hidden by Crash's Blind Roll Skills module. Remember, what you don't know can't hurt you!",
-  "BLINDROLLSKILLS.SkillNamesSetting": "Skills to Roll Blindly",
-  "BLINDROLLSKILLS.SkillNamesSettingHint": "Enter the names of the skills you would like to always blind roll. Separate multiple skills with commas. If you don't want any skills to force blind rolls, uncheck the Enable Forced Blind Rolls option rather than leaving this blank. Leaving it blank could lead to unexpected results."
+  "BLINDROLLSKILLS.SettingForceBlindRolls": "Enable Hidden Skill Rolls",
+  "BLINDROLLSKILLS.SettingForceBlindRollsHint": "Toggle this on to hide the results of skills selected below from non-GMs.",
+
+  "BLINDROLLSKILLS.SettingHideAcrobatics": "Hide Acrobatics",
+  "BLINDROLLSKILLS.SettingHideAnimalHandling": "Hide Animal Handling",
+  "BLINDROLLSKILLS.SettingHideArcana": "Hide Arcana",
+  "BLINDROLLSKILLS.SettingHideAthletics": "Hide Athletics",
+  "BLINDROLLSKILLS.SettingHideDeception": "Hide Deception",
+  "BLINDROLLSKILLS.SettingHideHistory": "Hide History",
+  "BLINDROLLSKILLS.SettingHideInsight": "Hide Insight",
+  "BLINDROLLSKILLS.SettingHideIntimidation": "Hide Intimidation",
+  "BLINDROLLSKILLS.SettingHideInvestigation": "Hide Investigation",
+  "BLINDROLLSKILLS.SettingHideMedicine": "Hide Medicine",
+  "BLINDROLLSKILLS.SettingHideNature": "Hide Nature",
+  "BLINDROLLSKILLS.SettingHidePerception": "Hide Perception",
+  "BLINDROLLSKILLS.SettingHidePerformance": "Hide Performance",
+  "BLINDROLLSKILLS.SettingHidePersuasion": "Hide Persuasion",
+  "BLINDROLLSKILLS.SettingHideReligion": "Hide Religion",
+  "BLINDROLLSKILLS.SettingHideSleightOfHand": "Hide Sleight of Hand",
+  "BLINDROLLSKILLS.SettingHideStealth": "Hide Stealth",
+  "BLINDROLLSKILLS.SettingHideSurvival": "Hide Survival",
+
+  "BLINDROLLSKILLS.SettingHiddenMessage": "Message When Hidden",
+  "BLINDROLLSKILLS.SettingHiddenMessageHint": "The message that displays in the chat card in place of the roll results. Be as snarky or as informative as you want.",
+  "BLINDROLLSKILLS.SettingSkillNames": "Skills To Hide",
+  "BLINDROLLSKILLS.SettingSkillNameHint": "Enter the names of the skills you would like to hide the results of. Separate multiple skills with commas. If you don't want to hide the results of any skills, uncheck the Enable Hidden Skill Rolls option above rather than leaving this blank. Leaving it blank could lead to unexpected results."
 }

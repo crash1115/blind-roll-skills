@@ -1,23 +1,24 @@
-# Crash's 5e Blind Roll Skills
+# Crash's Hide Skill Rolls
 This module allows the DM to always hide the results of specified skills from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off.
 
-I made this for use in a home game, and at this time I have no plans to distribute it widely. You're welcome to fork and modify or even publish it if you need functionality that this does not provide.
+# Compatibility / Known Issues
+## Works With
+- Better Rolls 5e
+- MESS
 
-## Installation
-### Using The Manifest URL
+## Does Not Work With
+- Dice So Nice (the dice will still be shown, but the results will be hidden)
+
+## Translation Troubles
+- Players using modules to translate the dnd5e system will be able to see the results of rolls made by other players not using the same translations. If one player is using Spanish and everyone else is using German, the German players will see the Spanish rolls, and the Spanish player will see the German rolls. If everyone is using the same language, rolls will be hidden appropriately.
+
+# Installation
+## Using The Manifest URL
 1. Open up Foundry
 2. Navigate to the Add-On Modules tab
 3. Click Install Module
 4. Paste the following URL into the Manifest URL text field: https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/module.json
 5. Click Install
-
-## Change Log
-### Version 0.3.0
-Actually make things work as intended instead of just looking like they work as intended
-### Version 0.2.1
-Fix localization error
-### Version 0.2.0
-Initial Release, supports default 5e and BetterRolls
 
 # Got Questions?
 Contact me on Discord (CRASH1115#2944). I make no promises to provide support for this module, since I only use it for my home games.
