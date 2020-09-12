@@ -7,14 +7,15 @@ Hooks.once("init", () => {
   registerSettings();
 });
 
-// Catch chat message renders and do things
-Hooks.on('renderChatMessage', (app, html, msg) => {
+// Catch chat message creations and make em blind if we need to
+Hooks.on('preCreateChatMessage', (msg, options, userId) => {
 
   // If Force Blind Rolls is enabled and we're not a GM, let's hide some stuff!
-  if (game.settings.get("blind-roll-skills", "forceBlindRolls") && game.user.isGM === false){
+  if (game.settings.get("blind-roll-skills", "forceBlindRolls")){
 
-    // Get our replacement text
-    let newText = game.settings.get("blind-roll-skills", "hiddenMessage");
+    //Hide Dice So Nice Rolls if they're isEnabled
+    let oldDsn = game.dice3d.messageHookDisabled;
+    game.dice3d.messageHookDisabled = false;
 
     // Get list of skills to roll blindly
     let inputSkills = processSkills();
@@ -23,41 +24,49 @@ Hooks.on('renderChatMessage', (app, html, msg) => {
     // 5e stores the names in the card's flavor text, so we check that.
     // If any of the formatted items in the targets array are contained in the flavor text, we replace the roll with our text.
     let default5eTargets = formatForCore(inputSkills);
-    let flavorString = msg.message.flavor;
+    let flavorString = msg.flavor;
     if(flavorString){
       for (var i=0; i < default5eTargets.length ; i++){
         if(flavorString.includes(default5eTargets[i])){
-          $(html).find(".dice-roll").replaceWith("<div>" + newText + "</div>");
+          msg.blind = true;
+          msg.rollMode = "blindroll";
+          msg.whisper = ChatMessage.getWhisperRecipients("GM");
         }
       }
     }
 
-    // Blind-ify BetterRolls Roll Cards
+    //Handle BetterRolls5e
     // Better Rolls constructs its own chat cards, with the skill names in the header of the card's content, so we look at content.
-    // If any of the formatted items in the targets array match appear in that content, we replace the roll with our text.
+    // If any of the formatted items in the targets array match appear in that content, make it blind.
     if(game.modules.get("betterrolls5e")?.active){
       let betterRollsTargets = formatForBetterRolls(inputSkills);
-      let contentString = msg.message.content;
+      let contentString = msg.content;
       for (var i=0; i < betterRollsTargets.length ; i++){
         if(contentString.includes(betterRollsTargets[i])){
-          $(html).find(".dice-roll").replaceWith("<div>" + newText + "</div>");
+          msg.blind = true;
+          msg.rollMode = "blindroll";
+          msg.whisper = ChatMessage.getWhisperRecipients("GM");
         }
       }
     }
 
     // Blind-ify MESS Alt Rolls Cards
     // MESS constructs its own chat cards, with the skill names as a label in the card's content, so we look at content.
-    // If any of the formatted items in the targets array match appear in that content, we replace the roll with our text.
+    // If any of the formatted items in the targets array match appear in that content, make it blind
+    // NOTE: Currently a bug in MESS that makes blind rolls display to the roller: https://github.com/Moerill/Mess/issues/91
     if(game.modules.get("mess")?.active){
       let messTargets = formatForMess(inputSkills);
-      let contentString = msg.message.content;
+      let contentString = msg.content;
       for (var i=0; i < messTargets.length ; i++){
         if(contentString.includes(messTargets[i])){
-          $(html).find(".dice-roll").replaceWith("<div>" + newText + "</div>");
+          msg.blind = true;
+          msg.rollMode = "blindroll";
+          msg.whisper = ChatMessage.getWhisperRecipients("GM");
         }
       }
     }
 
-  }
+    game.dice3d.messageHookDisabled = oldDsn;
 
+  }
 });
