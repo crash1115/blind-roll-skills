@@ -1,3 +1,13 @@
+### Version 0.4.1
+CHANGES:
+- Shifted the module to make use of Foundry's built-in blind rolls
+- Removed the custom roll hidden message setting since it's no longer required
+- Added partial support for Dice So Nice (works with vanilla dnd5e, but not with MESS or Better Rolls 5e)
+FIXES:
+- Rolls are now hidden correctly regardless of what translations users are using
+BROKEN:
+- A bug in MESS preventing blind rolls from displaying correctly means that you will encounter problems using this module with MESS's alternative rolls enabled. Once that's fixed, everything should work great.
+
 ### Version 0.4.0
 Initial public release
 - Adds setting to customize message that appears when roll is hidden from player

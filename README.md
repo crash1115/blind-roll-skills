@@ -5,14 +5,14 @@ This module allows the DM to always hide the results of specified skills from pl
 
 # Compatibility / Known Issues
 ## Works With
+- Vanilla dnd5e
 - Better Rolls 5e
-- MESS
 
 ## Does Not Work With
-- Dice So Nice (the dice will still be shown, but the results will be hidden)
+- MESS (A bug with MESS is currently preventing Blind rolls from displaying correctly. Once that bug is resolved, everything should work great!)
 
-## Translation Troubles
-- Players using modules to translate the dnd5e system will be able to see the results of rolls made by other players not using the same translations. If one player is using Spanish and everyone else is using German, the German players will see the Spanish rolls, and the Spanish player will see the German rolls. If everyone is using the same language, rolls will be hidden appropriately.
+## Partial Support
+- Dice So Nice (works with vanilla dnd5e, does NOT work with Better Rolls 5e or MESS alternative rolls)
 
 # Installation
 ## Using The Manifest URL

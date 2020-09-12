@@ -8,15 +8,6 @@ export const registerSettings = function() {
     type: Boolean
   });
 
-    game.settings.register("blind-roll-skills", "hiddenMessage", {
-    name: game.i18n.localize("BLINDROLLSKILLS.SettingHiddenMessage"),
-    hint: game.i18n.localize("BLINDROLLSKILLS.SettingHiddenMessageHint"),
-    scope: "world",
-    config: true,
-    default: "Don't worry, what you don't know can't hurt you!",
-    type: String
-  });
-
   game.settings.register("blind-roll-skills", "hideAcrobatics", {
     name: game.i18n.localize("BLINDROLLSKILLS.SettingHideAcrobatics"),
     scope: "world",

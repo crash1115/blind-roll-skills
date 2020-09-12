@@ -1,8 +1,8 @@
 {
 	"name": "blind-roll-skills",
 	"title": "Crash's Hide Skill Rolls",
-	"description": "Lets the GM hide the results of selected skill checks from players.",
-	"version": "0.4.0",
+	"description": "Lets the GM hide the results of selected skill checks from players. Check package details for compatibility information.",
+	"version": "0.4.1",
 	"author": "CRASH1115#2944",
 	"minimumCoreVersion": "0.6.5",
 	"compatibleCoreVersion": "0.6.6",
@@ -17,5 +17,5 @@
 	],
 	"url": "https://github.com/crash1115/blind-roll-skills",
   "manifest": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/module.json",
-	"download": "https://github.com/crash1115/blind-roll-skills/releases/download/v0.4.0/blind-roll-skills.zip"
+	"download": "https://github.com/crash1115/blind-roll-skills/releases/download/v0.4.1/blind-roll-skills.zip"
 }
