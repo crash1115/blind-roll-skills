@@ -13,9 +13,11 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
   // If Force Blind Rolls is enabled and we're not a GM, let's hide some stuff!
   if (game.settings.get("blind-roll-skills", "forceBlindRolls")){
 
-    //Hide Dice So Nice Rolls if they're isEnabled
-    let oldDsn = game.dice3d.messageHookDisabled;
-    game.dice3d.messageHookDisabled = false;
+    //Hide Dice So Nice Rolls if they're enabled
+    if(game.modules.get("dice-so-nice")?.active){
+      let oldDsn = game.dice3d.messageHookDisabled;
+      game.dice3d.messageHookDisabled = false;
+    }
 
     // Get list of skills to roll blindly
     let inputSkills = processSkills();
@@ -66,7 +68,10 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
       }
     }
 
-    game.dice3d.messageHookDisabled = oldDsn;
+    // Reset DSN
+    if(game.modules.get("dice-so-nice")?.active){
+      game.dice3d.messageHookDisabled = oldDsn;
+    }
 
   }
 });
