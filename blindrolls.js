@@ -14,8 +14,9 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
   if (game.settings.get("blind-roll-skills", "forceBlindRolls")){
 
     //Hide Dice So Nice Rolls if they're enabled
+    let oldDsn;
     if(game.modules.get("dice-so-nice")?.active){
-      let oldDsn = game.dice3d.messageHookDisabled;
+      oldDsn = game.dice3d.messageHookDisabled;
       game.dice3d.messageHookDisabled = false;
     }
 

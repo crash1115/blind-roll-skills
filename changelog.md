@@ -1,3 +1,7 @@
+### Version 0.4.3
+FIXES:
+- Fixed an issue where having Dice So Nice installed would break everything. :/
+
 ### Version 0.4.2
 FIXES:
 - Fixed an issue where not having Dice So Nice installed would break everything.
