@@ -2,10 +2,10 @@
 	"name": "blind-roll-skills",
 	"title": "Crash's Hide Skill Rolls",
 	"description": "Lets the GM hide the results of selected skill checks from players. Check package details for compatibility information.",
-	"version": "0.4.3",
+	"version": "0.4.4",
 	"author": "CRASH1115#2944",
-	"minimumCoreVersion": "0.6.5",
-	"compatibleCoreVersion": "0.7.3",
+	"minimumCoreVersion": "0.7.5",
+	"compatibleCoreVersion": "0.7.5",
 	"systems": ["dnd5e"],
 	"esmodules": ["blindrolls.js"],
 	"languages": [
@@ -17,5 +17,5 @@
 	],
 	"url": "https://github.com/crash1115/blind-roll-skills",
   "manifest": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/module.json",
-	"download": "https://github.com/crash1115/blind-roll-skills/releases/download/v0.4.3/blind-roll-skills.zip"
+	"download": "https://github.com/crash1115/blind-roll-skills/releases/download/v0.4.4/blind-roll-skills.zip"
 }
