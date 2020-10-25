@@ -1,3 +1,9 @@
+### Version 0.4.4
+- Compatible with Foundry v0.7.5, dnd5e v0.98, and Better Rolls 5e v1.1.17
+- Partially compatible with Dice So Nice. Works with vanilla dnd5e (no roll altering mods installed), but not with Better Rolls.
+- Fixed an issue where skills wouldn't roll blindly when using Better Rolls.
+- Removed support for MESS alt rolls. Moerill has stated he's going to be removing the roll functionality and possibly deprecating MESS in the near future. I'll look into supporting whatever the replacement for MESS alt rolls is, if and when it becomes a thing.
+
 ### Version 0.4.3
 FIXES:
 - Fixed an issue where having Dice So Nice installed would break everything. :/

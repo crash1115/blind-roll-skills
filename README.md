@@ -7,12 +7,10 @@ This module allows the DM to always hide the results of specified skills from pl
 ## Works With
 - Vanilla dnd5e
 - Better Rolls 5e
+- Dice So Nice!
 
 ## Does Not Work With
-- MESS (A bug with MESS is currently preventing Blind rolls from displaying correctly. Once that bug is resolved, everything should work great!)
-
-## Partial Support
-- Dice So Nice (works with vanilla dnd5e, does NOT work with Better Rolls 5e or MESS alternative rolls)
+- MESS
 
 # Installation
 ## Using The Manifest URL

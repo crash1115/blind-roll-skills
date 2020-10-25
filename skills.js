@@ -33,23 +33,15 @@ export function formatForCore(abbreviations) {
 }
 
 // BetterRolls chat cards put skill names in the header in this format: <h3 class="item-name">Skill Name</h3>
+// We have to strip all the special spacing out of the msg content tho, so it becomes: <h3class="item-name">SkillName</h3>
 // Here we fetch the skills name right out of the dnd5e config files, since that should produce the translated skill name for us
 export function formatForBetterRolls(abbreviations) {
   let formattedSkills = [];
   for (var i = 0; i < abbreviations.length; i++){
     let abbr = abbreviations[i];
-    formattedSkills.push('<h3 class="item-name">' + CONFIG.DND5E.skills[abbr] + '</h3>');
-  }
-  return formattedSkills;
-}
-
-// MESS chat cards put skill names in the content in this format: <label class="mess-chat-roll-type">Skillname Skill Check</label>
-// Here we fetch the skills name right out of the dnd5e config files, since that should produce the translated skill name for us
-export function formatForMess(abbreviations) {
-  let formattedSkills = [];
-  for (var i = 0; i < abbreviations.length; i++){
-    let abbr = abbreviations[i];
-    formattedSkills.push('<label class="mess-chat-roll-type">' + game.i18n.format("DND5E.SkillPromptTitle", {skill: CONFIG.DND5E.skills[abbr]}) + '</label>');
+    let skillString = '<h3 class="item-name">' + CONFIG.DND5E.skills[abbr] + '</h3>';
+    skillString = skillString.replace(/(\s+)/gm, "");
+    formattedSkills.push(skillString);
   }
   return formattedSkills;
 }
