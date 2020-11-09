@@ -1,3 +1,6 @@
+### Version 0.4.5
+- Compatibility for Foundry v0.7.6 and dnd5e 1.1.0
+
 ### Version 0.4.4
 - Compatible with Foundry v0.7.5, dnd5e v0.98, and Better Rolls 5e v1.1.17
 - Partially compatible with Dice So Nice. Works with vanilla dnd5e (no roll altering mods installed), but not with Better Rolls.
