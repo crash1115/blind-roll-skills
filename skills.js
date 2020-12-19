@@ -45,3 +45,17 @@ export function formatForBetterRolls(abbreviations) {
   }
   return formattedSkills;
 }
+
+// MARS puts skill names in a label div in card's content, so we look at content.
+// We have to strip all the special spacing out of the msg content tho, so it becomes: <label>SkillNameSkillCheck</label>
+// Here we fetch the skills name right out of the dnd5e config files, since that should produce the translated skill name for us
+export function formatForMars(abbreviations) {
+  let formattedSkills = [];
+  for (var i = 0; i < abbreviations.length; i++){
+    let abbr = abbreviations[i];
+    let skillString = '<label>' + game.i18n.format("DND5E.SkillPromptTitle", {skill: CONFIG.DND5E.skills[abbr]}) + '</label>';
+    skillString = skillString.replace(/(\s+)/gm, "");
+    formattedSkills.push(skillString);
+  }
+  return formattedSkills;
+}

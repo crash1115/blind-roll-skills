@@ -7,9 +7,10 @@ This is a module for dnd5e that allows the DM to always hide the results of spec
 ## Works With
 - Vanilla dnd5e
 - Better Rolls 5e
+- MARS 5e
 
 ## Does Not Work With
-- MESS. Moerill has stated he's going to be removing the roll functionality and possibly deprecating MESS in the near future. I'll look into supporting whatever the replacement for MESS alt rolls is, if and when it becomes a thing.
+- Nothing, to my knowledge!
 
 ## Partial Support
 - Dice So Nice works with vanilla dnd5e, but does NOT work in conjunction with Better Rolls. Hopefully that'll be changing down the line as Red Reign continues to make improvements to BR!
