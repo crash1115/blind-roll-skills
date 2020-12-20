@@ -9,11 +9,8 @@ This is a module for dnd5e that allows the DM to always hide the results of spec
 - Better Rolls 5e
 - MARS 5e
 
-## Does Not Work With
-- Nothing, to my knowledge!
-
 ## Partial Support
-- Dice So Nice works with vanilla dnd5e, but does NOT work in conjunction with Better Rolls. Hopefully that'll be changing down the line as Red Reign continues to make improvements to BR!
+- Dice So Nice works with vanilla dnd5e, but does NOT work in conjunction with Better Rolls or MARS. Hopefully that'll be changing down the line, but for now there's not a ton I can do about it.
 
 # Installation
 ## Using The Manifest URL
