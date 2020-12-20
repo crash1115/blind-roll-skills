@@ -1,3 +1,7 @@
+### Version 0.5.0
+- Compatibility for Foundry v0.7.9 and dnd5e 1.2.0
+- Compatibility for MARS 5e
+
 ### Version 0.4.5
 - Compatibility for Foundry v0.7.6 and dnd5e 1.1.0
 

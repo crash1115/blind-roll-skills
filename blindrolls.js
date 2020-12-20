@@ -1,6 +1,6 @@
 // Import Stuff
 import { registerSettings } from "./settings.js";
-import { processSkills, formatForCore, formatForBetterRolls } from "./skills.js";
+import { processSkills, formatForCore, formatForBetterRolls, formatForMars } from "./skills.js";
 
 // Register Game Settings
 Hooks.once("init", () => {
@@ -46,5 +46,22 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
         }
       }
     }
+
+    // Blind-ify MARS 5e Roll Cards
+    // MARS constructs its own chat cards, with the skill names in a label div in card's content, so we look at content.
+    // We have to strip out all the spaces and fun characters from the content to get something reliably readable.
+    // If any of the formatted items in the targets array match appear in that content, make it blind.
+    if(game.modules.get("mars-5e")?.active){
+      let marsTargets = formatForMars(inputSkills);
+      let contentString = msg.content.replace(/(\r\n|\n|\r|\s+)/gm, "");
+      for (var i=0; i < marsTargets.length ; i++){
+        if(contentString.includes(marsTargets[i])){
+          msg.blind = true;
+          msg.rollMode = "blindroll";
+          msg.whisper = ChatMessage.getWhisperRecipients("GM");
+        }
+      }
+    }
+
   }
 });
