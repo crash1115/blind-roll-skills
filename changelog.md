@@ -1,3 +1,6 @@
+### Version 0.5.1
+- Now properly hides 3d dice when using Better Rolls Alpha in conjunction with DSN
+
 ### Version 0.5.0
 - Compatibility for Foundry v0.7.9 and dnd5e 1.2.0
 - Compatibility for MARS 5e

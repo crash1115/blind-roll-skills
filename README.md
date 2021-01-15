@@ -1,7 +1,7 @@
 ![GitHub All Releases](https://img.shields.io/github/downloads/crash1115/blind-roll-skills/total) ![GitHub Releases](https://img.shields.io/github/downloads/crash1115/blind-roll-skills/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/crash1115/blind-roll-skills?label=latest%20version)
 
 # Crash's Hide Skill Rolls
-This is a module for dnd5e that allows the DM to always hide the results of specified skills from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off. Supports vanilla dnd5e (with or without DSN) and Better Rolls (without DSN).
+This is a module for dnd5e that allows the DM to always hide the results of specified skills from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off. Supports vanilla dnd5e and Better Rolls alpha (with or without DSN) and MARS (without DSN).
 
 # Compatibility / Known Issues
 ## Works With
@@ -10,7 +10,7 @@ This is a module for dnd5e that allows the DM to always hide the results of spec
 - MARS 5e
 
 ## Partial Support
-- Dice So Nice works with vanilla dnd5e, but does NOT work in conjunction with Better Rolls or MARS. Hopefully that'll be changing down the line, but for now there's not a ton I can do about it.
+- Dice So Nice works with vanilla dnd5e and Better Rolls (alpha), but does NOT work in conjunction with MARS.
 
 # Installation
 ## Using The Manifest URL
