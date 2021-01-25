@@ -1,3 +1,6 @@
+### Version 0.5.2
+- Fixed a bug where module would incorrectly override roll mode when using Better Rolls 5e.
+
 ### Version 0.5.1
 - Now properly hides 3d dice when using Better Rolls Alpha in conjunction with DSN
 
