@@ -1,3 +1,7 @@
+### Version 0.6.0
+- Added a setting to hide initiative rolls
+- Added a setting to hide death saves
+
 ### Version 0.5.2
 - Fixed a bug where module would incorrectly override roll mode when using Better Rolls 5e.
 

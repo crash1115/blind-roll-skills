@@ -19,6 +19,8 @@
   "BLINDROLLSKILLS.SettingHideSleightOfHand": "Hide Sleight of Hand",
   "BLINDROLLSKILLS.SettingHideStealth": "Hide Stealth",
   "BLINDROLLSKILLS.SettingHideSurvival": "Hide Survival",
-  "BLINDROLLSKILLS.SettingHiddenMessage": "Message When Hidden",
-  "BLINDROLLSKILLS.SettingHiddenMessageHint": "The message that displays in the chat card in place of the roll results. Be as snarky or as informative as you want."
+
+  "BLINDROLLSKILLS.SettingHideDeathSaves": "Hide Death Saving Throws",
+  "BLINDROLLSKILLS.SettingHideInitiative": "Hide Initiative Rolls"
+
 }
