@@ -1,6 +1,6 @@
 // Import Stuff
 import { registerSettings } from "./settings.js";
-import { processSkills, formatForCore, formatForBetterRolls, formatForMars } from "./skills.js";
+import { processSkills, processNonSkills, formatForCore, formatForBetterRolls, formatForMars } from "./skills.js";
 
 // Register Game Settings
 Hooks.once("init", () => {
@@ -25,7 +25,9 @@ let blindRollMade = false;
 Hooks.on("messageBetterRolls", (_, chatData) => {
   if (game.settings.get("blind-roll-skills", "forceBlindRolls")){
     let inputSkills = processSkills();
+    let nonSkills = processNonSkills();
     let betterRollsTargets = formatForBetterRolls(inputSkills);
+    betterRollsTargets = betterRollsTargets.concat(nonSkills);
     let contentString = chatData.content.replace(/(\r\n|\n|\r|\s+)/gm, "");
     for (var i=0; i < betterRollsTargets.length ; i++){
       if(contentString.includes(betterRollsTargets[i])){
@@ -51,11 +53,13 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
 
     // Get list of skills to roll blindly
     let inputSkills = processSkills();
+    let nonSkills = processNonSkills();
 
     // Blind-ify Default 5e Roll Cards
     // 5e stores the names in the card's flavor text, so we check that.
     // If any of the formatted items in the targets array are contained in the flavor text, we replace the roll with our text.
     let default5eTargets = formatForCore(inputSkills);
+    default5eTargets = default5eTargets.concat(nonSkills);
     let flavorString = msg.flavor;
     if(flavorString){
       for (var i=0; i < default5eTargets.length ; i++){
@@ -83,6 +87,7 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
     // If any of the formatted items in the targets array match appear in that content, make it blind.
     if(game.modules.get("mars-5e")?.active){
       let marsTargets = formatForMars(inputSkills);
+      marsTargets = marsTargets.concat(nonSkills);
       let contentString = msg.content.replace(/(\r\n|\n|\r|\s+)/gm, "");
       for (var i=0; i < marsTargets.length ; i++){
         if(contentString.includes(marsTargets[i])){

@@ -21,6 +21,19 @@ export function processSkills() {
   return hiddenSkills;
 }
 
+// This outputs an array of the non-skill roll strings we're looking for.
+export function processNonSkills() {
+  let hiddenRolls = []
+  if(game.settings.get("blind-roll-skills", "hideInitiative")){
+    hiddenRolls.push("rolls for Initiative!"); //this doesn't have a localization entry in 5e yet?
+  }
+
+  if(game.settings.get("blind-roll-skills", "hideDeathSaves")){
+    hiddenRolls.push(game.i18n.format("DND5E.DeathSavingThrow"));
+  }
+  return hiddenRolls;
+}
+
 // Default 5e rolls put the skill check name in the flavor attribute in this format: Skillname Skill Check
 // Here we use localization to get that string for whatever language the user is using.
 export function formatForCore(abbreviations) {

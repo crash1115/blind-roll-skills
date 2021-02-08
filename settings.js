@@ -8,6 +8,22 @@ export const registerSettings = function() {
     type: Boolean
   });
 
+  game.settings.register("blind-roll-skills", "hideDeathSaves", {
+    name: game.i18n.localize("BLINDROLLSKILLS.SettingHideDeathSaves"),
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean
+  });
+
+  game.settings.register("blind-roll-skills", "hideInitiative", {
+    name: game.i18n.localize("BLINDROLLSKILLS.SettingHideInitiative"),
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean
+  });
+
   game.settings.register("blind-roll-skills", "hideAcrobatics", {
     name: game.i18n.localize("BLINDROLLSKILLS.SettingHideAcrobatics"),
     scope: "world",
