@@ -1,74 +1,45 @@
-export function processSkills() {
-  let hiddenSkills = [];
-  if(game.settings.get("blind-roll-skills", "hideAcrobatics")){ hiddenSkills.push("acr");}
-  if(game.settings.get("blind-roll-skills", "hideAnimalHandling")){ hiddenSkills.push("ani");}
-  if(game.settings.get("blind-roll-skills", "hideArcana")){ hiddenSkills.push("arc");}
-  if(game.settings.get("blind-roll-skills", "hideAthletics")){ hiddenSkills.push("ath");}
-  if(game.settings.get("blind-roll-skills", "hideDeception")){ hiddenSkills.push("dec");}
-  if(game.settings.get("blind-roll-skills", "hideHistory")){ hiddenSkills.push("his");}
-  if(game.settings.get("blind-roll-skills", "hideInsight")){ hiddenSkills.push("ins");}
-  if(game.settings.get("blind-roll-skills", "hideIntimidation")){ hiddenSkills.push("itm");}
-  if(game.settings.get("blind-roll-skills", "hideInvestigation")){ hiddenSkills.push("inv");}
-  if(game.settings.get("blind-roll-skills", "hideMedicine")){ hiddenSkills.push("med");}
-  if(game.settings.get("blind-roll-skills", "hideNature")){ hiddenSkills.push("nat");}
-  if(game.settings.get("blind-roll-skills", "hidePerception")){ hiddenSkills.push("prc");}
-  if(game.settings.get("blind-roll-skills", "hidePerformance")){ hiddenSkills.push("prf");}
-  if(game.settings.get("blind-roll-skills", "hidePersuasion")){ hiddenSkills.push("per");}
-  if(game.settings.get("blind-roll-skills", "hideReligion")){ hiddenSkills.push("rel");}
-  if(game.settings.get("blind-roll-skills", "hideSleightOfHand")){ hiddenSkills.push("slt");}
-  if(game.settings.get("blind-roll-skills", "hideStealth")){ hiddenSkills.push("ste");}
-  if(game.settings.get("blind-roll-skills", "hideSurvival")){ hiddenSkills.push("sur");}
-  return hiddenSkills;
+export function getSkillAbbreviations() {
+  let skills = [];
+  if(game.settings.get("blind-roll-skills", "hideAcrobatics")){ skills.push("acr");}
+  if(game.settings.get("blind-roll-skills", "hideAnimalHandling")){ skills.push("ani");}
+  if(game.settings.get("blind-roll-skills", "hideArcana")){ skills.push("arc");}
+  if(game.settings.get("blind-roll-skills", "hideAthletics")){ skills.push("ath");}
+  if(game.settings.get("blind-roll-skills", "hideDeception")){ skills.push("dec");}
+  if(game.settings.get("blind-roll-skills", "hideHistory")){ skills.push("his");}
+  if(game.settings.get("blind-roll-skills", "hideInsight")){ skills.push("ins");}
+  if(game.settings.get("blind-roll-skills", "hideIntimidation")){ skills.push("itm");}
+  if(game.settings.get("blind-roll-skills", "hideInvestigation")){ skills.push("inv");}
+  if(game.settings.get("blind-roll-skills", "hideMedicine")){ skills.push("med");}
+  if(game.settings.get("blind-roll-skills", "hideNature")){ skills.push("nat");}
+  if(game.settings.get("blind-roll-skills", "hidePerception")){ skills.push("prc");}
+  if(game.settings.get("blind-roll-skills", "hidePerformance")){ skills.push("prf");}
+  if(game.settings.get("blind-roll-skills", "hidePersuasion")){ skills.push("per");}
+  if(game.settings.get("blind-roll-skills", "hideReligion")){ skills.push("rel");}
+  if(game.settings.get("blind-roll-skills", "hideSleightOfHand")){ skills.push("slt");}
+  if(game.settings.get("blind-roll-skills", "hideStealth")){ skills.push("ste");}
+  if(game.settings.get("blind-roll-skills", "hideSurvival")){ skills.push("sur");}
+  return skills;
 }
 
-// This outputs an array of the non-skill roll strings we're looking for.
-export function processNonSkills() {
-  let hiddenRolls = []
-  if(game.settings.get("blind-roll-skills", "hideInitiative")){
-    hiddenRolls.push("rolls for Initiative!"); //this doesn't have a localization entry in 5e yet?
-  }
-
-  if(game.settings.get("blind-roll-skills", "hideDeathSaves")){
-    hiddenRolls.push(game.i18n.format("DND5E.DeathSavingThrow"));
-  }
-  return hiddenRolls;
-}
-
-// Default 5e rolls put the skill check name in the flavor attribute in this format: Skillname Skill Check
-// Here we use localization to get that string for whatever language the user is using.
-export function formatForCore(abbreviations) {
-  let formattedSkills = [];
-  for (var i = 0; i < abbreviations.length; i++){
-    let abbr = abbreviations[i];
-    formattedSkills.push(game.i18n.format("DND5E.SkillPromptTitle", {skill: CONFIG.DND5E.skills[abbr]}));
-  }
-  return formattedSkills;
-}
-
-// BetterRolls chat cards put skill names in the header in this format: <h3 class="item-name">Skill Name</h3>
-// We have to strip all the special spacing out of the msg content tho, so it becomes: <h3class="item-name">SkillName</h3>
-// Here we fetch the skills name right out of the dnd5e config files, since that should produce the translated skill name for us
-export function formatForBetterRolls(abbreviations) {
-  let formattedSkills = [];
-  for (var i = 0; i < abbreviations.length; i++){
-    let abbr = abbreviations[i];
-    let skillString = '<h3 class="item-name">' + CONFIG.DND5E.skills[abbr] + '</h3>';
-    skillString = skillString.replace(/(\s+)/gm, "");
-    formattedSkills.push(skillString);
-  }
-  return formattedSkills;
-}
-
-// MARS puts skill names in a label div in card's content, so we look at content.
-// We have to strip all the special spacing out of the msg content tho, so it becomes: <label>SkillNameSkillCheck</label>
-// Here we fetch the skills name right out of the dnd5e config files, since that should produce the translated skill name for us
-export function formatForMars(abbreviations) {
-  let formattedSkills = [];
-  for (var i = 0; i < abbreviations.length; i++){
-    let abbr = abbreviations[i];
-    let skillString = '<label>' + game.i18n.format("DND5E.SkillPromptTitle", {skill: CONFIG.DND5E.skills[abbr]}) + '</label>';
-    skillString = skillString.replace(/(\s+)/gm, "");
-    formattedSkills.push(skillString);
-  }
-  return formattedSkills;
+export function getSkillNames() {
+  let skills = [];
+  if(game.settings.get("blind-roll-skills", "hideAcrobatics")){ skills.push(CONFIG.DND5E.skills["acr"]);}
+  if(game.settings.get("blind-roll-skills", "hideAnimalHandling")){ skills.push(CONFIG.DND5E.skills["ani"]);}
+  if(game.settings.get("blind-roll-skills", "hideArcana")){ skills.push(CONFIG.DND5E.skills["arc"]);}
+  if(game.settings.get("blind-roll-skills", "hideAthletics")){ skills.push(CONFIG.DND5E.skills["ath"]);}
+  if(game.settings.get("blind-roll-skills", "hideDeception")){ skills.push(CONFIG.DND5E.skills["dec"]);}
+  if(game.settings.get("blind-roll-skills", "hideHistory")){ skills.push(CONFIG.DND5E.skills["his"]);}
+  if(game.settings.get("blind-roll-skills", "hideInsight")){ skills.push(CONFIG.DND5E.skills["ins"]);}
+  if(game.settings.get("blind-roll-skills", "hideIntimidation")){ skills.push(CONFIG.DND5E.skills["itm"]);}
+  if(game.settings.get("blind-roll-skills", "hideInvestigation")){ skills.push(CONFIG.DND5E.skills["inv"]);}
+  if(game.settings.get("blind-roll-skills", "hideMedicine")){ skills.push(CONFIG.DND5E.skills["med"]);}
+  if(game.settings.get("blind-roll-skills", "hideNature")){ skills.push(CONFIG.DND5E.skills["nat"]);}
+  if(game.settings.get("blind-roll-skills", "hidePerception")){ skills.push(CONFIG.DND5E.skills["prc"]);}
+  if(game.settings.get("blind-roll-skills", "hidePerformance")){ skills.push(CONFIG.DND5E.skills["prf"]);}
+  if(game.settings.get("blind-roll-skills", "hidePersuasion")){ skills.push(CONFIG.DND5E.skills["per"]);}
+  if(game.settings.get("blind-roll-skills", "hideReligion")){ skills.push(CONFIG.DND5E.skills["rel"]);}
+  if(game.settings.get("blind-roll-skills", "hideSleightOfHand")){ skills.push(CONFIG.DND5E.skills["slt"]);}
+  if(game.settings.get("blind-roll-skills", "hideStealth")){ skills.push(CONFIG.DND5E.skills["ste"]);}
+  if(game.settings.get("blind-roll-skills", "hideSurvival")){ skills.push(CONFIG.DND5E.skills["sur"]);}
+  return skills;
 }
