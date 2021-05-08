@@ -1,10 +1,10 @@
 ![GitHub All Releases](https://img.shields.io/github/downloads/crash1115/blind-roll-skills/total) ![GitHub Releases](https://img.shields.io/github/downloads/crash1115/blind-roll-skills/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/crash1115/blind-roll-skills?label=latest%20version)
 
 # Crash's Automatic Blind Rolls (5e)
-This is a module for dnd5e that allows the DM to always hide the results of specified skills, initiative rolls, or death saves from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off. Supports vanilla dnd5e and Better Rolls (with or without DSN) and MARS (without DSN). Should work with midi, but I've never personally tested it.
+This is a module for dnd5e that allows the DM to always hide the results of specified skills, initiative rolls, or death saves from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off. Supports vanilla dnd5e and Better Rolls (with or without DSN). May or may not work with other rolling modules. I've tested a few, but by no means have I done so thoroughly.
 
 # Compatibility / Known Issues
-These are systems/modules that I either actively work to maintain or have somehow tested. Status for these modules is up to date as of v0.6.1 of this module, and the specified versions of the listed modules. I don't update these with every release, so they may end up out of date.
+These are systems/modules that I either actively work to maintain or have somehow tested. Status for these modules is up to date as of v0.7.0 of this module, and the specified versions of the listed modules. I don't update these with every release, so they may end up out of date.
 
 ## Full Support
 These are the systems and modules I actively work to maintain. If there are issues with these, bug reports are fair game.
