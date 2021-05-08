@@ -1,13 +1,14 @@
 {
 	"name": "blind-roll-skills",
 	"title": "Crash's Automatic Blind Rolls (5e)",
-	"description": "A dnd5e mod that lets the GM hide the results of selected skill checks, initiative rolls, or death saves from players. Check package details for compatibility information.",
-	"version": "0.6.0",
+	"description": "Allows the GM to force selected skill checks, initiative rolls, or death saves to roll blindly. Check package details for compatibility information.",
+	"version": "0.7.0",
 	"author": "CRASH1115#2944",
-	"minimumCoreVersion": "0.7.5",
+	"minimumCoreVersion": "0.7.9",
 	"compatibleCoreVersion": "0.7.9",
 	"systems": ["dnd5e"],
 	"esmodules": ["blindrolls.js"],
+	"styles": ["styles/blindrolls.css"],
 	"languages": [
 		{
 			"lang": "en",
@@ -17,5 +18,19 @@
 	],
 	"url": "https://github.com/crash1115/blind-roll-skills",
   "manifest": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/module.json",
-	"download": "https://github.com/crash1115/blind-roll-skills/releases/download/v0.6.0/blind-roll-skills.zip"
+	"download": "https://github.com/crash1115/blind-roll-skills/releases/download/v0.7.0/blind-roll-skills.zip",
+	"readme": "https://github.com//crash1115/blind-roll-skills/blob/master/README.md",
+	"bugs": "https://github.com/crash1115/blind-roll-skills/issues",
+	"allowBugReporter": true,
+	"manifestPlusVersion": "1.1.0",
+	"media": [
+		{
+			"type": "icon",
+			"link": "https://i.gyazo.com/c6703b13bbcdb5b222a2f758e58f95f1.png"
+		},
+		{
+			"type": "cover",
+			"link": "https://i.gyazo.com/f1cb0ff23732255f05147d75e679d976.png"
+		}
+	]
 }

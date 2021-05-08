@@ -8,8 +8,18 @@ export const registerSettings = function() {
     type: Boolean
   });
 
+  game.settings.register("blind-roll-skills", "showHelpCards", {
+    name: game.i18n.localize("BLINDROLLSKILLS.SettingShowHelpCards"),
+    hint: game.i18n.localize("BLINDROLLSKILLS.SettingShowHelpCardsHint"),
+    scope: "client",
+    config: true,
+    default: true,
+    type: Boolean
+  });
+
   game.settings.register("blind-roll-skills", "hideDeathSaves", {
     name: game.i18n.localize("BLINDROLLSKILLS.SettingHideDeathSaves"),
+    hint: game.i18n.localize("BLINDROLLSKILLS.SettingHideDeathSavesHint"),
     scope: "world",
     config: true,
     default: false,

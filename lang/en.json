@@ -21,6 +21,14 @@
   "BLINDROLLSKILLS.SettingHideSurvival": "Hide Survival",
 
   "BLINDROLLSKILLS.SettingHideDeathSaves": "Hide Death Saving Throws",
-  "BLINDROLLSKILLS.SettingHideInitiative": "Hide Initiative Rolls"
+  "BLINDROLLSKILLS.SettingHideDeathSavesHint": "This only hides the roll in the chat. Users will still see the number of successes and failures on the character sheet.",
 
+  "BLINDROLLSKILLS.SettingHideInitiative": "Hide Initiative Rolls",
+
+  "BLINDROLLSKILLS.SettingShowHelpCards": "Show Help Cards",
+  "BLINDROLLSKILLS.SettingShowHelpCardsHint": "Toggle this on to display chat messages when your rolls are made blindly because of this module.",
+
+  "BLINDROLLSKILLS.ChatCardHelpText": "Your roll is hidden from you because your GM has chosen this type of roll to be made blind by default.",
+  "BLINDROLLSKILLS.ChatCardDisableText": "Only you can see this message. If you no longer wish to recieve these notifications, you can disable them via Game Settings > Configure Settings > Module Settings.",
+  "BLINDROLLSKILLS.ChatCardSpeaker": "Automatic Blind Roll"
 }
