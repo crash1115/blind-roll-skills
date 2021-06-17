@@ -8,14 +8,14 @@ These are systems/modules that I either actively work to maintain or have someho
 
 ## Full Support
 These are the systems and modules I actively work to maintain. If there are issues with these, bug reports are fair game.
-- Vanilla dnd5e (as of 1.7.9, works with or without Dice So Nice)
-- Better Rolls 5e (as of 1.4.11, works with or without Dice So Nice)
+- Vanilla dnd5e (as of 1.3.2, works with or without Dice So Nice)
+- Better Rolls 5e (as of 1.5.3, works with or without Dice So Nice)
 
 ## Partial Support
 These are modules that I've tested this module alongside, but don't actively work to maintain. If there are issues with these, you probably want to file a feature request issue rather than a bug report.
-- Mars 5e (as of 1.5.1, does not work with Dice So Nice, but works by itself)
-- Midi QOL (as of 0.3.103, works with or without Dice So Nice)
-- Minimal Rolling Enhancements (as of 1.0.9, works with or without Dice So Nice)
+- Mars 5e (as of 1.6.1, does not work with Dice So Nice, but works by itself)
+- Midi QOL (as of 0.8.14, works with or without Dice So Nice)
+- Minimal Rolling Enhancements (as of 2.0.0, works with or without Dice So Nice)
 
 # Installation
 ## Using The Manifest URL

@@ -1,3 +1,8 @@
+# Version 0.7.1 (Foundry 0.8.x)
+- Compatibility with Foundry 0.8.7 and dnd5e 1.3.2. This version will not work with Foundry 0.7.x. Previous versions remain compatible with Foundry 0.7.x.
+- Should work with Better Rolls, MRE, and core dnd5e rolling (with or without DSN).
+- MARS 5e works without DSN.
+
 # Version 0.7.0 (Final release for Foundry 0.7.x)
 - When a roll is made blindly because of this module, the user will now get a whisper explaining why.
 - Added a client setting to disable the help whispers.
