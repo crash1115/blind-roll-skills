@@ -47,18 +47,22 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
     // Blind-ify Default 5e & MARS 5e Roll Cards
     // We check the dnd5e flags in the msg to see if it contains any of the skills,
     // or is a death save, or is an initiative roll, and hide accordingly
-    if(msg.flags){
-      if(skillsToBlind.includes(msg.flags.dnd5e?.roll?.skillId)) { makeRollBlind = true; }
-      if(game.settings.get("blind-roll-skills", "hideDeathSaves") && (msg.flags.dnd5e?.roll?.type === "death")) { makeRollBlind = true; }
-      if(game.settings.get("blind-roll-skills", "hideInitiative") && msg.flags['core.initiativeRoll']) { makeRollBlind = true; }
+    if(msg.data.flags){
+      if(skillsToBlind.includes(msg.data.flags.dnd5e?.roll?.skillId)) { makeRollBlind = true; }
+      if(game.settings.get("blind-roll-skills", "hideDeathSaves") && (msg.data.flags.dnd5e?.roll?.type === "death")) { makeRollBlind = true; }
+      if(game.settings.get("blind-roll-skills", "hideInitiative") && msg.data.flags.core?.initiativeRoll) { makeRollBlind = true; }
     }
 
-    // If we need to make the roll blindly, do it.
+    // // If we need to make the roll blindly, do it.
     if(makeRollBlind){
-      msg.blind = true;
       let gmUsers = ChatMessage.getWhisperRecipients("GM");
       let gmUserIds = gmUsers.map(u => u.data._id);
-      msg.whisper = gmUserIds;
+      let updates = {
+        blind: true,
+        whisper: gmUserIds
+      }
+      msg.data.update(updates);
+
       createAlertMsg();
     }
 
@@ -73,6 +77,7 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
     }
 
   }
+
 });
 
 // Digs through the BR chatData flags to find the header field, then gets the title
