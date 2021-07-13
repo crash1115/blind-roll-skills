@@ -16,7 +16,7 @@ These are modules that I've tested this module alongside, but don't actively wor
 - Mars 5e (as of 1.6.1, does not work with Dice So Nice, but works by itself)
 - Minimal Rolling Enhancements (as of 2.0.0, works with or without Dice So Nice)
 
-## Bo Support
+## No Support
 These are modules that ABR does not work with, and that I have no intention of ensuring that it works with.
 - Midi QOL (as of 0.8.30ish)
 
