@@ -14,8 +14,11 @@ These are the systems and modules I actively work to maintain. If there are issu
 ## Partial Support
 These are modules that I've tested this module alongside, but don't actively work to maintain. If there are issues with these, you probably want to file a feature request issue rather than a bug report.
 - Mars 5e (as of 1.6.1, does not work with Dice So Nice, but works by itself)
-- Midi QOL (as of 0.8.14, works with or without Dice So Nice)
 - Minimal Rolling Enhancements (as of 2.0.0, works with or without Dice So Nice)
+
+## Bo Support
+These are modules that ABR does not work with, and that I have no intention of ensuring that it works with.
+- Midi QOL (as of 0.8.30ish)
 
 # Installation
 ## Using The Manifest URL
