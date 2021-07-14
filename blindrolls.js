@@ -43,6 +43,22 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
   if (game.settings.get("blind-roll-skills", "forceBlindRolls")){
     let makeRollBlind = false;
     let skillsToBlind = getSkillAbbreviations();
+    
+    // Midi Patch
+    // Midi no longer preserves dnd5e flags on the msg, so we gotta go back to the old way
+    // of checking flavor. This patch will only work if everyone is using foundry in English,
+    // since we're hard-coding what words to look for here. That won't hold up to translations.
+    if(game.modules.get('midi-qol')?.active){
+      let flavorTargets = [];
+      let skillNamesToBlind = getSkillNames();
+      for(var i=0; i< skillNamesToBlind.length; i++){
+        flavorTargets.push(skillNamesToBlind[i] + " Skill Check");
+        flavorTargets.push(skillNamesToBlind[i] + " Skill Check (Advantage)");
+        flavorTargets.push(skillNamesToBlind[i] + " Skill Check (Disadvantage)");
+      }
+
+      if(flavorTargets.includes(msg.data.flavor)){ makeRollBlind = true; }
+    }
 
     // Blind-ify Default 5e & MARS 5e Roll Cards
     // We check the dnd5e flags in the msg to see if it contains any of the skills,
