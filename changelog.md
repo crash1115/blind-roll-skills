@@ -1,3 +1,10 @@
+# Version 0.8.0
+- Compatibility with Foundry 0.8.8
+- Removed the "soft disable" setting
+- Help cards now display a button to disable them, rather than just text explaining where to find the setting
+- Added an API that other modules can access to determine what rolls should be made blindly.
+- Started behind-the-scenes work to allow for attack rolls and saves to be auto-blinded using this module
+
 # Version 0.7.1 (Foundry 0.8.x)
 - Compatibility with Foundry 0.8.7 and dnd5e 1.3.2. This version will not work with Foundry 0.7.x. Previous versions remain compatible with Foundry 0.7.x.
 - Should work with Better Rolls, MRE, and core dnd5e rolling (with or without DSN).

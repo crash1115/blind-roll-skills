@@ -1,6 +1,4 @@
 {
-  "BLINDROLLSKILLS.SettingForceBlindRolls": "Enable Hidden Skill Rolls",
-  "BLINDROLLSKILLS.SettingForceBlindRollsHint": "Toggle this on to hide the results of skills selected below from non-GMs.",
   "BLINDROLLSKILLS.SettingHideAcrobatics": "Hide Acrobatics",
   "BLINDROLLSKILLS.SettingHideAnimalHandling": "Hide Animal Handling",
   "BLINDROLLSKILLS.SettingHideArcana": "Hide Arcana",
@@ -23,12 +21,18 @@
   "BLINDROLLSKILLS.SettingHideDeathSaves": "Hide Death Saving Throws",
   "BLINDROLLSKILLS.SettingHideDeathSavesHint": "This only hides the roll in the chat. Users will still see the number of successes and failures on the character sheet.",
 
+  "BLINDROLLSKILLS.SettingHideSaves": "Hide Saving Throws",
+  "BLINDROLLSKILLS.SettingHideSavesHint": "This will hide all non death saves.",
+
+  "BLINDROLLSKILLS.SettingHideAttackRolls": "Hide Attack Rolls",
+
   "BLINDROLLSKILLS.SettingHideInitiative": "Hide Initiative Rolls",
 
   "BLINDROLLSKILLS.SettingShowHelpCards": "Show Help Cards",
   "BLINDROLLSKILLS.SettingShowHelpCardsHint": "Toggle this on to display chat messages when your rolls are made blindly because of this module.",
 
   "BLINDROLLSKILLS.ChatCardHelpText": "Your roll is hidden from you because your GM has chosen this type of roll to be made blind by default.",
-  "BLINDROLLSKILLS.ChatCardDisableText": "Only you can see this message. If you no longer wish to recieve these notifications, you can disable them via Game Settings > Configure Settings > Module Settings.",
-  "BLINDROLLSKILLS.ChatCardSpeaker": "Automatic Blind Roll"
+  "BLINDROLLSKILLS.ChatCardDisableText": "Don't show me this again",
+  "BLINDROLLSKILLS.ChatCardSpeaker": "Automatic Blind Roll",
+  "BLINDROLLSKILLS.HelpCardsDisabled": "Help cards disabled!"
 }
