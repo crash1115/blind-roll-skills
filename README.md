@@ -21,6 +21,7 @@ These are modules that I've tested this module alongside, but don't actively wor
 These are modules that don't work with this module and that I have no intention of supporting ever.
 - None right now
 
+
 ## DIY Support
 If you're a module dev and want to build support for Automatic Blind Rolls into your module rather than relying on me to do it, tools now exist for you to do so. Check out the API section of the wiki for a list of methods available to you, and a guide on how to get it done. It's only a couple lines of code, added to wherever you determine whether or not your roll should be blind. If you implement support in this way, please let me know so I can include your module in the appropriate support listings.
 

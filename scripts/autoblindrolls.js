@@ -36,6 +36,7 @@ Hooks.on("messageBetterRolls", (roll, chatData) => {
     chatData.blind = true;
     createAlertMsg();
   }
+
 });
 
 // Catch chat message creations and make em blind if we need to
@@ -76,7 +77,6 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
 
     createAlertMsg();
   }
-
 });
 
 // Digs through the BR chatData flags to find the header field, then gets the title.
