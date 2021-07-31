@@ -3,8 +3,6 @@
 # Crash's Automatic Blind Rolls (5e)
 This is a module for dnd5e that allows the DM to always hide the results of specified skills, initiative rolls, or death saves from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off. Supports vanilla dnd5e and Better Rolls (with or without DSN). May or may not work with other rolling modules. I've tested a few, but by no means have I done so thoroughly.
 
-
-
 # Compatibility / Known Issues
 These are systems/modules that I either actively work to maintain or have somehow tested. Status for these modules is up to date as of v0.7.0 of this module, and the specified versions of the listed modules. I don't update these with every release, so they may end up out of date.
 
@@ -24,7 +22,6 @@ These are modules that ABR does not work with, and that I have no intention of e
 
 ## DIY Support
 If you're a module dev and want to build support for Automatic Blind Rolls into your module rather than relying on me to do it, tools now exist for you to do so. Check out the API section of the wiki for a list of methods available to you, and a guide on how to get it done. It's only a couple lines of code, added to wherever you determine whether or not your roll should be blind. If you implement support in this way, please let me know so I can include your module in the appropriate support listings.
-
 
 # Installation
 ## Using The Manifest URL
