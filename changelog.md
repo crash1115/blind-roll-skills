@@ -1,3 +1,6 @@
+# Version 0.8.1
+- Fix issue with DSN displaying 3d dice on blind rolls when used with BR.
+
 # Version 0.8.0
 - Compatibility with Foundry 0.8.8
 - Removed the "soft disable" setting

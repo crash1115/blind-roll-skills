@@ -13,12 +13,14 @@ These are the systems and modules I actively work to maintain. If there are issu
 
 ## Partial Support
 These are modules that I've tested this module alongside, but don't actively work to maintain. If there are issues with these, you probably want to file a feature request issue rather than a bug report.
-- Mars 5e (as of 1.6.1, does not work with Dice So Nice, but works by itself)
-- Minimal Rolling Enhancements (as of 2.0.0, works with or without Dice So Nice)
+- Mars 5e (as of Mars 1.6.1, does not work with Dice So Nice, but works by itself)
+- Minimal Rolling Enhancements (as of MRE 2.0.0, works with or without Dice So Nice)
+- Midi QOL (it might actually work, up to you to find out)
 
 ## No Support
-These are modules that ABR does not work with, or that I have no intention of ensuring that it works with.
-- Midi QOL
+These are modules that don't work with this module and that I have no intention of supporting ever.
+- None right now
+
 
 ## DIY Support
 If you're a module dev and want to build support for Automatic Blind Rolls into your module rather than relying on me to do it, tools now exist for you to do so. Check out the API section of the wiki for a list of methods available to you, and a guide on how to get it done. It's only a couple lines of code, added to wherever you determine whether or not your roll should be blind. If you implement support in this way, please let me know so I can include your module in the appropriate support listings.
