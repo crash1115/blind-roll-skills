@@ -20,34 +20,22 @@ Hooks.on(`ready`, () => {
 	globalThis.AutoBlindRolls = autoBlindRolls();
 });
 
-// Set up a var for the user's original roll mode
-let oldRollMode;
-
-// Set up a flag so we know when a blind roll has been made. Only used with BR/DSN right now.
-let blindRollMade = false;
-
 // Blind-ify BetterRolls5e Roll Cards
 // Better Rolls constructs its own chat cards, with the skill names in the header field.
 // We compare a list of formatted skill names to that header. If there's a match, we make it blind.
-
-// If we're using DSN, it's not enough for us to just alter the chatData.
-// We also have to set Foundry's roll mode to blind so the 3d dice don't roll.
-// We save the old roll mode first so we can reset it later.
 Hooks.on("messageBetterRolls", (roll, chatData) => {
   let skillsToBlind = getSkillNames();
   let cardTitle = getBrCardTitle(chatData);
   let makeRollBlind = skillsToBlind.includes(cardTitle);
 
   if(makeRollBlind){
+    let gmUsers = ChatMessage.getWhisperRecipients("GM");
+    let gmUserIds = gmUsers.map(u => u.data._id);
+    chatData.whisper = gmUserIds;
     chatData.rollMode = "blindroll";
+    chatData.blind = true;
     createAlertMsg();
-    if(game.dice3d){
-      blindRollMade = true;
-      oldRollMode = game.settings.get("core", "rollMode");
-      game.settings.set("core", "rollMode", "blindroll");
-    }
   }
-
 });
 
 // Catch chat message creations and make em blind if we need to
@@ -87,16 +75,6 @@ Hooks.on('preCreateChatMessage', (msg, options, userId) => {
     msg.data.update(updates);
 
     createAlertMsg();
-  }
-
-  // Reset DSN (used in conjunction with with BR)
-  // We already used the BR hook to take care of whether or not things are blind.
-  // Here all we wanna do is see if DSN is active, and reset the roll mode since we changed it earlier
-  if(game.modules.get("betterrolls5e")?.active){
-    if(game.dice3d && blindRollMade){
-      game.settings.set("core", "rollMode", oldRollMode);
-      blindRollMade = false;
-    }
   }
 
 });
