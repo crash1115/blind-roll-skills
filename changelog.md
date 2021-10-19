@@ -1,9 +1,9 @@
+
 # Version 0.8.2
 
 - Fix issue with BR when rolling items
 
 # Version 0.8.1
-
 - Fix issue with DSN displaying 3d dice on blind rolls when used with BR.
 
 # Version 0.8.0
