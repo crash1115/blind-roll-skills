@@ -9,36 +9,9 @@ export const registerSettings = function() {
     type: Boolean
   });
 
-  // TODO: Implement once modules adopt functionality
-  // game.settings.register("blind-roll-skills", "hideAttacks", {
-  //   name: game.i18n.localize("BLINDROLLSKILLS.SettingHideAttackRolls"),
-  //   scope: "world",
-  //   config: true,
-  //   default: false,
-  //   type: Boolean
-  // });
-
-  //TODO: Implement once modules adopt functionality
-  // game.settings.register("blind-roll-skills", "hideSaves", {
-  //   name: game.i18n.localize("BLINDROLLSKILLS.SettingHideSaves"),
-  //   hint: game.i18n.localize("BLINDROLLSKILLS.SettingHideSavesHint"),
-  //   scope: "world",
-  //   config: true,
-  //   default: false,
-  //   type: Boolean
-  // });
-
   game.settings.register("blind-roll-skills", "hideDeathSaves", {
     name: game.i18n.localize("BLINDROLLSKILLS.SettingHideDeathSaves"),
     hint: game.i18n.localize("BLINDROLLSKILLS.SettingHideDeathSavesHint"),
-    scope: "world",
-    config: true,
-    default: false,
-    type: Boolean
-  });
-
-  game.settings.register("blind-roll-skills", "hideInitiative", {
-    name: game.i18n.localize("BLINDROLLSKILLS.SettingHideInitiative"),
     scope: "world",
     config: true,
     default: false,
