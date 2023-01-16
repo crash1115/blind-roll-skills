@@ -4,6 +4,7 @@
 - Added libwrapper as a requirement
 
 # Version 0.8.2
+
 - Fix issue with BR when rolling items
 
 # Version 0.8.1
