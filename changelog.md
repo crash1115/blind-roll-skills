@@ -1,6 +1,10 @@
+# Version 0.9.1 (Foundry v11)
+- Verified compatibility with Foundry v11
+- Updated license. Previous versions of this module were released under CC, which wasn't really appropriate. Now we're using MIT. Have fun.
+
 # Version 0.9.0 (Foundry v10)
 - Compatibility with Foundry v10
-- Removed the option to hide initiative rolles. Other modules do this.
+- Removed the option to hide initiative rolls. Other modules do this.
 - Added libwrapper as a requirement
 
 # Version 0.8.2
