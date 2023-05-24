@@ -25,6 +25,7 @@
     }],
     "requires":[ {"id": "lib-wrapper"} ]
   },
+
   "esmodules": ["scripts/autoblindrolls.js"],
   "styles": ["styles/blindrolls.css"],
   "languages": [

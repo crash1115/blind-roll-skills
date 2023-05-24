@@ -3,6 +3,7 @@ import { libWrapper } from './libwrapper-shim.js'
 import { registerSettings } from "./settings.js";
 import { getSkillAbbreviations } from "./skills.js";
 
+
 // Register Game Settings & Listeners
 Hooks.once("init", () => {
   registerSettings();
@@ -82,6 +83,7 @@ export function autoBlindRolls() {
     let skillsToBlind = getSkillAbbreviations();
     return skillsToBlind.includes(skill);
   }
+
 
   // Deprecated
   function makeSaveBlind() {
