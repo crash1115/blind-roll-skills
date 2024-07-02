@@ -1,3 +1,6 @@
+# Version 0.9.2 (Foundry v12)
+- Verified compatibility with Foundry v12
+
 # Version 0.9.1 (Foundry v11)
 - Verified compatibility with Foundry v11
 - Updated license. Previous versions of this module were released under CC, which wasn't really appropriate. Now we're using MIT. Have fun.
