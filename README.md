@@ -4,7 +4,7 @@ Due to time constraints, I'm no longer able to keep updating this module with an
 ![GitHub All Releases](https://img.shields.io/github/downloads/crash1115/blind-roll-skills/total) ![GitHub Releases](https://img.shields.io/github/downloads/crash1115/blind-roll-skills/latest/total) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/crash1115/blind-roll-skills?label=latest%20version)
 
 # Crash's Automatic Blind Rolls (5e)
-This is a module for dnd5e that allows the DM to always hide the results of specified skills or death saves from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off.
+This is a module for dnd5e that allows the DM to always hide the results of specified skills from players. This is handy in case you don't want the results of an Insight or Perception check to tip your players off.
 
 # Installation
 ## Using The Manifest URL

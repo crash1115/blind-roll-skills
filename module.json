@@ -1,8 +1,8 @@
 {
   "name": "blind-roll-skills",
   "title": "Crash's Automatic Blind Rolls (5e)",
-  "description": "Allows the GM to force selected skill checks, initiative, saves, and attacks to roll blindly. Check package details for compatibility information.",
-  "version": "0.9.1",
+  "description": "Allows the GM to force selected skill checks to roll blindly. Check package details for compatibility information.",
+  "version": "0.9.2",
   "authors": [
     {
       "name": "CRASH1115#2944",
@@ -11,7 +11,7 @@
   ],
   "compatibility": {
     "minimum": "10",
-    "verified": "11"
+    "verified": "12"
   },
   "relationships": {
     "systems": [{
@@ -20,7 +20,7 @@
       "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
       "compatibility": {
         "minimum": "2.1.2",
-        "verified": "2.1.2"
+        "verified": "3.2.1"
       }
     }],
     "requires":[ {"id": "lib-wrapper"} ]
@@ -37,7 +37,7 @@
   ],
   "url": "https://github.com/crash1115/blind-roll-skills",
   "manifest": "https://raw.githubusercontent.com/crash1115/blind-roll-skills/master/module.json",
-  "download": "https://github.com/crash1115/blind-roll-skills/releases/download/v0.9.1/blind-roll-skills.zip",
+  "download": "https://github.com/crash1115/blind-roll-skills/releases/download/v0.9.2/blind-roll-skills.zip",
   "readme": "https://github.com//crash1115/blind-roll-skills/blob/master/README.md",
   "bugs": "https://github.com/crash1115/blind-roll-skills/issues"
 }
