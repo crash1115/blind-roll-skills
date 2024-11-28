@@ -3,7 +3,6 @@
   - Code for skill checks and death saves now expects the new dnd5e v4.1 style parameters (`config`, `dialog`, and `message`)
   - Support for the legacy parameters for `rollSkill` and `preRollDeathSaveV2` will remain until dnd5e v4.5, when they are slated to be deprecated according to system warnings
 
-
 # Version 0.9.2 (Foundry v12, Final release for dnd5e v3.x)
 - Verified compatibility with Foundry v12
 
