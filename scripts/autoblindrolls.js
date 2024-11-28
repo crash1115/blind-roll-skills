@@ -21,15 +21,25 @@ Hooks.once("init", () => {
     }
   );
 
-  async function skillCheckOverride(originalRoll, skillId, options) {
-    if(!options){
-      options = {};
+  async function skillCheckOverride(originalRoll, config, dialog ={}, message={}) {
+
+    // Fix: Get pre dnd v4.1 style roll syntax to work
+    // Old syntax will have config coming in as a string, but dnd v4.1.2 expects an object
+    // TODO: Remove after dnd5e v4.5 when the old syntax will no longer be supported
+    if ( foundry.utils.getType(config) !== "Object" ){
+      console.warn(game.i18n.localize("BLINDROLLSKILLS.SyntaxCompatibilityWarning"));
+      const newConfig = {
+        skill: config
+      }
+      config = newConfig;
     }
-    if( AutoBlindRolls.makeSkillBlind(skillId) ){ 
-      options.rollMode = "blindroll";
+
+    if( AutoBlindRolls.makeSkillBlind(config.skill) ){ 
       createAlertMsg();
+      message.rollMode = "blindroll";
     }
-    let result = await originalRoll(skillId, options);
+    
+    let result = await originalRoll(config, dialog, message);
     return result;
   }
 
@@ -38,9 +48,9 @@ Hooks.once("init", () => {
 });
 
 // Overrides the default roll mode for the death save dialog
-Hooks.on("dnd5e.preRollDeathSave", (actor, rollData) => {
+Hooks.on("dnd5e.preRollDeathSaveV2", (config, dialog ={}, message={}) => {
   if( AutoBlindRolls.makeDeathSaveBlind() ){ 
-    rollData.rollMode = "blindroll";
+    message.rollMode = "blindroll";
     createAlertMsg();
   }
 });
